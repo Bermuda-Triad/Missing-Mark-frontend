@@ -2,6 +2,8 @@ import React from 'react'
 import loginImage from "../../assets/loginimage.jpg"
 import Regestration from '../../components/authpage/Regestration'
 
+import Login from '../../components/authpage/Login'
+
 type Props = {}
 
 function LoginPage({}: Props) {
@@ -22,7 +24,8 @@ function LoginPage({}: Props) {
         <div className='mb-[70px] ' >
             <img src="src/assets/mmustlogo.svg" className='h-[106px] w-[121px]' alt="" />
         </div>
-        <Regestration/>
+        {/* <Regestration/> */}
+        <Login/>
         </div>
     </div>
   )
