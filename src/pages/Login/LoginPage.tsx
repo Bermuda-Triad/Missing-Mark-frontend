@@ -1,12 +1,19 @@
 import React from 'react'
 import loginImage from "../../assets/loginimage.jpg"
 import Regestration from '../../components/authpage/Regestration'
+import { Routes,Route, Router } from 'react-router'
 
+import { useNavigate } from 'react-router-dom'
 import Login from '../../components/authpage/Login'
+import { BrowserRouter } from 'react-router-dom'
 
 type Props = {}
 
 function LoginPage({}: Props) {
+
+  
+  const navigate = useNavigate()
+
   return (
     <div className='flex items- w-full h-screen justify-center gap-[109px]'>
         <div className={`w-full   bg-[url('src/assets/loginimage.jpg')] bg-center bg-cover flex items-center justify-start `}>
@@ -25,7 +32,16 @@ function LoginPage({}: Props) {
             <img src="src/assets/mmustlogo.svg" className='h-[106px] w-[121px]' alt="" />
         </div>
         {/* <Regestration/> */}
-        <Login/>
+     <Routes>
+
+
+      <Route  path='/login'  Component={ Login }/>
+      <Route  path='/register'  Component={ Regestration }/>
+     </Routes>
+        
+       
+
+     
         </div>
     </div>
   )

@@ -1,16 +1,22 @@
 import React, { ChangeEvent, useReducer } from 'react'
 import { useState } from 'react'
 
+
+
+//validation
+import { validation } from './validations/Validations'
+import { Link, useNavigate } from 'react-router-dom'
+
+
 type Props = {}
 
 type Validation = {
   validate:(inputs:string) => boolean
- 
 }
 type Inputs = {
-  username:string
-  password:string
-  confirmPassword:string
+  username:string;
+  password:string;
+  confirmPassword:string;
 }
 
 type State = {
@@ -27,47 +33,43 @@ type Action =
   // basically usereducer takes in to input
   // initial and the dispatch ie to call the function
 
-function formReducer(state:State,action:Action):State{
-  switch(action.type){
-    case 'SET_USERNAME':
-      return{
-        ...state,
-        userName :action.payload
-      }
-    case 'SET_PASSWORD':
-      return{
-        ...state,
-        password:action.payload
-      }
-      default:
-        return state
-  }
-}
 
 function Login({}: Props) {
-    const [username,setUserName] = useState<Inputs["username"]>()
+
+  const navigate = useNavigate()
+
+  let vaStudent = new validation
+
+    const [username,setUserName] = useState<Inputs["username"] >("")
+    const [input,setInput] = useState<boolean>(true)
     const [password,setPassword] = useState<Inputs["password"]>()
     const [confirmPassword,setConfirmPassword] = useState<Inputs["confirmPassword"]>()
     
-    // defina the initial state
 
-    let initialState:State = {
-      userName:"",
-      password:''
+    let checker = {
+      valid:'border-b border-defaultgray',
+      invalid:'  border-b border-red'
     }
-    // the difination of the function
+  //  validation
+  function refReg(e){
+    // setInput(vaStudent.validateStudent(username as string));
+    // if the length si valid
+    setUserName(e.target.value)
+   
+    
+    if(username.length > 8) {
+      setInput(true) 
+      
+      console.log(username.length)
 
-    const [state,dispatch] = useReducer(formReducer,initialState)
-
-    // when any input of the inputs changes it should trigger the following code
-    function handleInputChange(e:ChangeEvent<HTMLInputElement>):void{
-          // then it should change the input
-          const {name,value} = e.target
-          dispatch({
-            type:`SET_${name.toUpperCase()}`,payload:value
-          })
     }
-  
+  //  else if(username.length  <3) setInput(true)
+   else {
+    setInput(false)
+   }
+    console.log(input)
+    console.log(username)
+  }
   
 
   return (
@@ -80,7 +82,7 @@ function Login({}: Props) {
       <form action="" className='flex flex-col gap-[36px]'>
       
 
-        <span className='border-b border-defaultgray outline-none '><input type="password" className='border-none outline-none placeholder-secondary text-secondary text-[19.2px] '  placeholder='RF Number/ Reg Number'/>  </span>
+        <span className={`border-b border-defaultgray outline-none ${ input ? checker.valid : checker.invalid}` }><input type="password" className={` outline-none placeholder-secondary text-secondary text-[19.2px] w-full `}  placeholder='RF Number/ Reg Number' onChange={refReg}/>  </span>
         <span className='border-b border-defaultgray outline-none '><input type="password" className='border-none outline-none text-secondary placeholder-secondary  text-[19.2px] '  placeholder='Password'/>  </span>
 
         {/* <input type="text" >welcome</input> */}
@@ -92,7 +94,7 @@ function Login({}: Props) {
 
        </h2>
 
-       <a href="" className='text-red' > Register </a>
+       <Link to="/register" className='text-red'onClick={e => navigate("register")}> Register </Link>
 
        </p>
     </div>
