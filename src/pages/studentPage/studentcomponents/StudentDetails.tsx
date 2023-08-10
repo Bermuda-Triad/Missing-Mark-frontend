@@ -19,7 +19,7 @@ function StudentDetails({}: Props) {
         <div className=' flex items-center justify-between py-[39px]'>
           <h2 className='text-secondary text-[23.04px]'>Marks Investigated</h2>
           <div>
-     <AddMark showForm={showForm} setShowForm={setShowForm}/>
+     <AddMark />
         </div>
         </div>
         {/* this is the top part */}

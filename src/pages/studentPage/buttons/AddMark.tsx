@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import AddMissingMark from '../../../components/missingMarkForm/MissingMarkPopUp'
 
 type Props = {
     showForm:boolean;
@@ -17,7 +18,12 @@ function AddMark({showForm,setShowForm}: Props) {
 
     }
   return (
-    <button className='bg-themeblue text-white py-[8px] px-[16px] text-[13.33px] drop-shadow-md' onClick={addHandler}>+ Add Missing Mark</button>
+    <>
+    <AddMissingMark/>
+   
+    </>
+   
+
   )
 }
 
