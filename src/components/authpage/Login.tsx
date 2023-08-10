@@ -86,7 +86,7 @@ function Login({}: Props) {
         <span className='border-b border-defaultgray outline-none '><input type="password" className='border-none outline-none text-secondary placeholder-secondary  text-[19.2px] '  placeholder='Password'/>  </span>
 
         {/* <input type="text" >welcome</input> */}
-       <input type="submit" value="Login" className='py-[10px] cursor-pointer bg-secondary text-white' />
+       <input type="submit" value="Login" onClick={e => navigate("/student")} className='py-[10px] cursor-pointer bg-secondary text-white' />
       </form>
 
       <p className='my-[10px] text-[16px] flex items-center justify-between'>

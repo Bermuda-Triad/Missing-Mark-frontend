@@ -35,7 +35,7 @@ function LoginPage({}: Props) {
      <Routes>
 
 
-      <Route  path='/login'  Component={ Login }/>
+      <Route  path='/'  Component={ Login }/>
       <Route  path='/register'  Component={ Regestration }/>
      </Routes>
         

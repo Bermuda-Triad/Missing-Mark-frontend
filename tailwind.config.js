@@ -15,7 +15,12 @@ export default {
       defaultgray:"#6E7685",
       white:"#ffffff",
       black:"#000000",
-      red:"#F28383"
+      red:"#F28383",
+      themeblue:"#1485D6",
+      green:"#2AA020",
+      title:"#484848",
+      dateblue:"#1A85D6",
+      lightGray:"#F0F0F0"
     },
 
     
