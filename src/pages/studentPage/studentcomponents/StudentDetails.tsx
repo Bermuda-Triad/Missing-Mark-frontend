@@ -3,6 +3,7 @@ import "./StudentDetails.css"
 import ReactTable from "react-table"
 import MissingMark from '../../../components/missingMarkForm/MissingMark'
 import AddMark from '../buttons/AddMark'
+import Details from '../../../components/missingMarkForm/Details'
 
 type Props = {}
 
@@ -58,7 +59,7 @@ function StudentDetails({}: Props) {
   
             <tbody>
   
-  <tr className=' w-ful text-secondary'>
+  <tr className=' w-ful text-secondary '>
     <td className='flex flex-col py-[17px]'>
       <p>10:20AM</p>
       <p className='text-dateblue'>16/2/2020</p>
@@ -69,13 +70,17 @@ function StudentDetails({}: Props) {
     <td className='capitalize'>Dr. Angulu Ralph</td>
   
     <td className='text-green font-[700]'>Found</td>
-    <td className='font-[700]  capitalize text-themeblue'></td>
+    <td className='font-[700]  capitalize   '>
+      <Details/>
+  
+    </td>
   </tr>
   </tbody>
           </table>
         </div>
        
         {/* containgnin the markd */}
+        
       </div>
 
       )
