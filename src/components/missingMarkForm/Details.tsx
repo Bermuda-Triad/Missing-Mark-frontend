@@ -1,35 +1,51 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
 
 const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  position: "absolute" as "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #fff',
+  bgcolor: "background.paper",
+  
   boxShadow: 24,
   p: 4,
 };
 const ButtonStyle = {
-    bgcolor:'#1485D6',
-    color:'white'
+  bgcolor: "#1485D6",
+  color: "white",
+};
+type chooses={
+  setDetails:boolean
 }
 
-export default function Details() {
+export default function Details({setDetails}:chooses) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  
-
   return (
     <div>
-      <div onClick={handleOpen} className=' cursor-pointer  flex px-[.8rem] bg-green text-white w-[100px] py-[.6rem] rounded-xl font-Poppins text-[8.rem] font-[400] capitalize'><img src="src/assets/document-normal.svg"  className='text-red mr-3 ' alt="" /> Detail</div  >
+      <div
+        onClick={handleOpen}
+        className={`cursor-pointer  flex px-[.8rem]   text-white w-[100px] py-[.6rem] rounded-xl font-Poppins text-[8.rem] font-[400] capitalize"
+        ${
+          setDetails ? 'bg-green':"bg-red"
+        }
+        
+        `} 
+      >
+        <img
+          src="src/assets/document-normal.svg"
+          className="text-red mr-3 "
+          alt=""
+        />{" "}
+        Detail
+      </div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -37,28 +53,55 @@ export default function Details() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-        <div className='w-full  flex flex-col items-center justify-center '>
-       <form action="" className='p-[3.75rem]    bg-white text-[16px] '>
-        <h2 className='text-defaultgray font-[700] text-[20px] mb-[22px] uppercase'>Add Unit</h2>
-        <div className='flex flex-col  '>
+          <div>
 
-        <label htmlFor="full name" className='text-defaultgray capitalize'> Unit Title</label>
-        <input type="text" placeholder='full name' className='py-[12px] text-[13px] px-[8px] outline-none text-secondary' />
+          </div>
+          <div className="w-full  flex flex-col items-start justify-center  text-[1rem]">
+          
+            <h2 className="mt-7 mb-10 text-[3rem] font-extrabold font-Poppins text-green">Marks Found</h2>
 
-        <label htmlFor="pf-number" className='text-defaultgray capitalize mt-[28px]'>Unit Code</label>
-        <input type="text" placeholder='unit code' className='py-[12px] px-[8px] outline-none text-secondary' />
+            <p>
+              unit Title:<strong>Ethical Issues</strong>
+            </p>
+            <p>
+              Unit Code: <strong>BIT 392</strong>
+            </p>
 
-        
-        <input type="submit" value={"SUBMIT"} className='bg-defaultgray text-whit  text-[14px] py-[12px] text-white font-[500] px-[8px] mt-[28px]'/>
-        </div>
-       </form>
-    </div>
+            <p>
+              Acedimic Year: <strong>2019/2021</strong>
+            </p>
+            <p>
+              Student Reg Number: <strong>SIT/B/01-00142/2021</strong>
+            </p>
+
+            <p className="mt-7">
+              Date submitted: <strong>7/2/2012</strong>
+            </p>
+            <p className="mb-10">
+              Date found: <strong>26/7/2010</strong>
+            </p>
+
+            <hr className="h-[1px] bg-defaultgray w-full"/>
+            <table className="mt-4" >
+              <thead>
+                <tr className=" text-red text-[1rem]">
+                  <th>CAT</th>
+                  <th>EXAM</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="text-[2rem] font-extrabold text-defaultgray">
+                    <td>23</td>
+                    <td>50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </Box>
       </Modal>
     </div>
   );
 }
-    
-    
-  
-// 
+
+//
