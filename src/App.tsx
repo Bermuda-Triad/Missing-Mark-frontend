@@ -10,8 +10,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-    
+    <BrowserRouter>    
     
    <div className=' font-Poppins'>
     {/* <LoginPage/> */}
