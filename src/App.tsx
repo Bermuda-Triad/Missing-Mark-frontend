@@ -18,6 +18,7 @@ function App() {
     {/* <MissingMarkForm/> */}
     <LecturerPage/>
     {/* <MissingMark/> */}
+    {/* <LecturerPage/> */}
 
 
    </div>
