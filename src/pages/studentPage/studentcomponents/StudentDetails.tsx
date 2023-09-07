@@ -26,7 +26,7 @@ function StudentDetails({}: Props) {
   
         {/* containing the marks */}
         <div> 
-          <table className=' w-full table-auto text-[14px]'>
+          <table className='table-auto text-[14px]'>
             <thead className=''>
               
               <tr className=' capitalize font-bold ' >
@@ -35,8 +35,8 @@ function StudentDetails({}: Props) {
                 <th>Course Code</th>
                 <th>Acedemic Year</th>
                 <th>Lecturer</th>
-                <th>update</th>
-                <th>details</th>
+                <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>

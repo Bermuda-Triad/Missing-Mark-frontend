@@ -4,6 +4,7 @@ import MissingMarkForm from './components/missingMarkForm/MissingMarkForm'
 import Student from './pages/studentPage/Student'
 import MissingMark from './components/missingMarkForm/MissingMark'
 import './App.css'
+import LecturerPage from './pages/LecturerPage/LecturerPage'
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
     
    <div className=' font-Poppins'>
     {/* <LoginPage/> */}
-    <Student/>
+    {/* <Student/> */}
     {/* <MissingMarkForm/> */}
+    <LecturerPage/>
     {/* <MissingMark/> */}
 
 

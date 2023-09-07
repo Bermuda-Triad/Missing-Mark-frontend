@@ -1,4 +1,5 @@
 import React from 'react'
+import Profile from '../../../components/Profile'
 
 type Props = {}
 
@@ -16,17 +17,7 @@ function StudentHeader({}: Props) {
       </div>
 
       {/* the student details goes here */}
-      <div className='flex items-center justify-center mr-3   gap-[14px]'>
-{/* all fo this is from the db */}
- <div>
-    <p className='text-[16px] font-extrabold capitalize text-secondary'>Student</p>
-    <p className='text-[13.33px] text-secondary'>SIT/B/00-00100/2021</p>
- </div>
- 
- <div>
-    <img src="src/assets/user.svg" alt="user image" className='bg-themeblue p-[8px] rounded-full' />
- </div>
-      </div>
+     <Profile whosePage="Student" reg='SIT/B/00-00100/2021'/>
       {/* the student details */}
     </div>
   )
