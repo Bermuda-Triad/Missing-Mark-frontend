@@ -1,10 +1,11 @@
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LoginPage from './pages/Login/LoginPage'
 import MissingMarkForm from './components/missingMarkForm/MissingMarkForm'
 import Student from './pages/studentPage/Student'
 import MissingMark from './components/missingMarkForm/MissingMark'
 import './App.css'
 import LecturerPage from './pages/LecturerPage/LecturerPage'
+import CodPage from './pages/Cod/CodPage'
 
 function App() {
 
@@ -13,12 +14,20 @@ function App() {
     <BrowserRouter>    
     
    <div className=' font-Poppins'>
-    {/* <LoginPage/> */}
+    <Routes>
+
+    <Route path='/login' Component={LoginPage}/>
+    <Route path='/student' Component={Student}/>
+    <Route path='/lecturerpage' Component={LecturerPage}/>
+    <Route path='/codpage' Component={CodPage}/>
+
     {/* <Student/> */}
     {/* <MissingMarkForm/> */}
-    <LecturerPage/>
+    {/* <LecturerPage/> */}
     {/* <MissingMark/> */}
     {/* <LecturerPage/> */}
+    {/* <CodPage/> */}
+    </Routes>
 
 
    </div>

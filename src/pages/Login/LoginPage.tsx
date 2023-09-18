@@ -6,6 +6,7 @@ import { Routes,Route, Router } from 'react-router'
 import { useNavigate } from 'react-router-dom'
 import Login from '../../components/authpage/Login'
 import { BrowserRouter } from 'react-router-dom'
+import Student from '../studentPage/Student'
 
 type Props = {}
 
@@ -37,6 +38,7 @@ function LoginPage({}: Props) {
 
       <Route  path='/'  Component={ Login }/>
       <Route  path='/register'  Component={ Regestration }/>
+      
      </Routes>
         
        

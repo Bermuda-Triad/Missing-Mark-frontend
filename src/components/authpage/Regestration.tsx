@@ -125,10 +125,15 @@ function Regestration({}: Props) {
           <input type="password" className='border-none outline-none text-secondary  text-[19.2px] '  placeholder='Confirm Password' name='confirm_password'  onChange={handleInputChange} />  </span>
 
         <p className='text-red italic '>{passwordError}</p>
-       <input type="submit" value="Register" className='py-[10px] cursor-pointer bg-secondary text-white' onClick={handleRegistration} />
+       <input type="submit" value="Register" className='py-[10px] cursor-pointer bg-secondary text-white' onClick={
+        () => {
+          handleRegistration
+          navigate("/studentpage")
+        }
+       } />
       </form>
 
-      <p className='my-[10px] text-[16px]'>Already have an account?  <button  className='text-red' onClick={() => navigate("/login")} >Login</button></p>
+      <p className='my-[10px] text-[16px]'>Already have an account?  <button  className='text-red' onClick={() => navigate("/")} >Login</button></p>
     </div>
   )
 }

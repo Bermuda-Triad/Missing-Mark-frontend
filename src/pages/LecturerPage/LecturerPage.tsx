@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Title from "../../components/Title";
 import Profile from "../../components/Profile";
+import Details from "../../components/missingMarkForm/Details";
 
 type Props = {};
 
@@ -13,22 +14,32 @@ function LecturerPage({}: Props) {
   });
 
   return (
-    <div className="px-4 pt-5 flex gap-6  items-start justify-center ">
-      {/* left side */}
-      <section className="h-screen  border-r border-lightGray max-w-[14rem] px-4">
-        <div className="flex gap-[6rem]">
-          <img
-            src="src/assets/mmustlogo.svg"
-            className="h-[59px] w-[67px]"
-            alt=""
-          />
+      <div className="px-4 pt-5 flex gap-6  items-start justify-center ">
+        {/* left side */}
+        <section className="h-screen  border-r border-lightGray max-w-[14rem] px-4">
+          <div className="flex gap-[6rem]">
+            <img
+              src="src/assets/mmustlogo.svg"
+              className="h-[59px] w-[67px]"
+              alt=""
+            />
 
-          <button className=" ">+</button>
+            <button className=" ng-red">
+              <img
+              src="src/assets/menu.svg"
+              alt=""
+              className="w-[20px]h-[30px]"
+            />
+          </button>
         </div>
 
         <div className="flex flex-col gap-[2rem] text-1xl font-Poppins text-center  mx-1 pt-4">
           <button
-            className="text-start py-2  w-14rem] pl-5 text-themeblue bg-lightGray "
+            className={`text-start py-2  w-14rem] pl-5  ${
+              show.pendingMarks
+                ? "text-themeblue bg-lightGray"
+                : "text-defaultgray"
+            }`}
             onClick={() => {
               console.log(show);
               setShow({
@@ -40,29 +51,36 @@ function LecturerPage({}: Props) {
           >
             X Pending Marks
           </button>
-          <button className="text-start py-2 text-defaultgray w-14rem] pl-5"
-           onClick={() => {
-       
-            setShow({
-              pendingMarks: false,
-              marksFound: true,
-              marksNotFound: false,
-            });
-            console.log(show)
-          }}
+          <button
+            className={`text-start py-2  w-14rem] pl-5  ${
+              show.marksFound
+                ? "text-themeblue bg-lightGray"
+                : "text-defaultgray"
+            }`}
+            onClick={() => {
+              setShow({
+                pendingMarks: false,
+                marksFound: true,
+                marksNotFound: false,
+              });
+              console.log(show);
+            }}
           >
             X Marks Found
           </button>
-          <button className="text-start py-2 text-defaultgray w-14rem] pl-5"
-           onClick={() => {
-       
-            setShow({
-              pendingMarks: false,
-              marksFound: false,
-              marksNotFound: true,
-            });
-          
-          }}
+          <button
+            className={`text-start py-2  w-14rem] pl-5  ${
+              show.marksNotFound
+                ? "text-themeblue bg-lightGray"
+                : "text-defaultgray"
+            }`}
+            onClick={() => {
+              setShow({
+                pendingMarks: false,
+                marksFound: false,
+                marksNotFound: true,
+              });
+            }}
           >
             X Marks Not Found
           </button>
@@ -124,6 +142,9 @@ function LecturerPage({}: Props) {
               <th className="text-start">Course Code</th>
               <th className="text-start">Acedemic Year</th>
               <th className="text-start">Lecturer</th>
+              <th className={`${show.marksFound ? "" : "hidden"} text-start`}>
+                Date Found
+              </th>
             </tr>
           </thead>
 
@@ -137,38 +158,25 @@ function LecturerPage({}: Props) {
               <td className="uppercase">BIT 410</td>
               <td>2022/2023</td>
               <td className="capitalize">Dr. Angulu Ralph</td>
+              <td className={` ${show.marksFound ? "" : "hidden"} text-start`}>
+                22/2/2021
+              </td>
 
-              <td className={`text-white font-[700] `}>
-                <span className="bg-defaultgray py-2 px-5 rounded-md font-normal">
+              <td className={`text-white font-[700]  `}>
+                {show.marksFound ? (
+                  <Details setDetails={true} />
+                ) : (
+                  <Details setDetails={false} />
+                )}
+
+                {/* <span className="bg-defaultgray py-2 px-5 rounded-md font-normal">
                   Found
-                </span>
+                </span> */}
               </td>
-              <td>
-                <span className="bg-red text-white py-2 px-5 rounded-md font-normal">
+              <td className={` ${show.marksFound ? "hidden" : ""}`}>
+                {/* <span className="bg-red text-white py-2 px-5 rounded-md font-normal">
                   Not Found
-                </span>
-              </td>
-            </tr>
-
-            <tr className=" w-full shadow-lg text-secondary ">
-              <td className="flex  flex-col py-[17px] pl-5">
-                <p>10:20AM </p>
-                <p className="text-dateblue">16/2/2020</p>
-              </td>
-              <td className=" capitalize">Digital Electronics</td>
-              <td className="uppercase">BIT 410</td>
-              <td>2022/2023</td>
-              <td className="capitalize">Dr. Angulu Ralph</td>
-
-              <td className="  text-white font-[700]">
-                <span className="bg-defaultgray py-2 px-5 rounded-md font-normal">
-                  Found
-                </span>
-              </td>
-              <td>
-                <span className="bg-red text-white py-2 px-5 rounded-md font-normal">
-                  Not Found
-                </span>
+                </span> */}
               </td>
             </tr>
           </tbody>
@@ -180,3 +188,31 @@ function LecturerPage({}: Props) {
 }
 
 export default LecturerPage;
+
+/* <tr className=" w-full shadow-lg text-secondary ">
+<td className="flex  flex-col py-[17px] pl-5">
+  <p>10:20AM </p>
+  <p className="text-dateblue">16/2/2020</p>
+</td>
+<td className=" capitalize">Digital Electronics</td>
+<td className="uppercase">BIT 410</td>
+<td>2022/2023</td>
+<td className="capitalize">Dr. Angulu Ralph</td>
+
+<td className={  `${show.marksFound ? "hidden" :""} text-white font-[700]`}>
+  {/* <span className="bg-defaultgray py-2 px-5 rounded-md font-normal">
+    Found
+  </span> */
+// <Details setDetails={false}/>
+
+// </td>
+/* <td> 
+  /* <span className="bg-red text-white py-2 px-5 rounded-md font-normal">
+    Not Found
+  </span> */
+
+// <Details setDetails={true} />
+
+// </td>
+// </tr>
+// */}

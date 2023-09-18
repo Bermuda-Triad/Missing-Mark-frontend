@@ -20,7 +20,7 @@ const ButtonStyle = {
     color:'white'
 }
 
-export default function AddMissingMark() {
+export default function AddUnits() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -29,7 +29,7 @@ export default function AddMissingMark() {
 
   return (
     <div>
-     <button className='bg-themeblue text-white py-[8px] px-[10px] text-[13.33px] drop-shadow-md' onClick={handleOpen}>+ Add Missing Mark</button>
+     <button className='bg-themeblue text-white py-[8px] px-[10px] text-[13.33px] drop-shadow-md' onClick={handleOpen}>+ Add Units</button>
       <Modal
         open={open}
         onClose={handleClose}
