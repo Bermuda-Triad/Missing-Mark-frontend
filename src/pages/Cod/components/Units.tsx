@@ -18,6 +18,8 @@ function Units({}: Props) {
         <tr className=" capitalize font-bold shadow-md flex flex-row justify-start gap-[280px] items-center">
           <th className="text-start pl-5 py-3 ">Unit Title</th>
           <th className='text-start py-3'> Unit Code</th>
+
+          
          
          
           
@@ -27,9 +29,9 @@ function Units({}: Props) {
       <tbody >
        <tr className='text-defaultgray  font-normal py-5 shadow-md flex   flex-row  items-center justify-between'>
         <th className='text-start pl-5 py-5 font-normal'>Communication Skills</th>
-        <th className='text-start  font-normal'> COS 100 </th>
+        <th className='text-start bg-redx font-normal mr-[350px]'> COS 100 </th>
         <th></th>
-        <table></table>
+     
 
         <th className='flex gap-10 pr-20'>
        

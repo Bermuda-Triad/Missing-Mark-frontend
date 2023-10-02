@@ -18,6 +18,19 @@ function CodPage({}: Props) {
     findMore: false,
   });
 
+  const [selectedComponent,setSelectedComponent] = useState("allapps")
+
+  const renderComponent = () => {
+    switch (selectedComponent) {
+      case "allapps":
+        return <AllApps/>
+      case "units" :
+        return <Units/>
+      case "lectures":
+        return <Lectures/>
+      
+    }
+  }
   return (
     <div className="px-4 pt-5 flex gap-6  items-start justify-center ">
       {/* left side */}
@@ -74,6 +87,8 @@ function CodPage({}: Props) {
                 findMore: false,
               });
               console.log(show);
+
+              // setSelectedComponent("allapps")
             }}
           >
             Lecturers
@@ -89,6 +104,7 @@ function CodPage({}: Props) {
                 units: true,
                 findMore: false,
               });
+              // setSelectedComponent("units")
 
               console.log(show)
             }}
@@ -106,6 +122,8 @@ function CodPage({}: Props) {
                 units: false,
                 findMore: true,
               });
+
+              // setSelectedComponent("findmore")
             }}
           >
             find more
@@ -130,14 +148,17 @@ function CodPage({}: Props) {
         </div>
 
         {
-          show.allApplication ||  show.lecturer ? <AllApps/> : show.allApplication  ? <Lectures/> : show.units ? <Units/> : <FindMarks/>
+          // show.allApplication ||  show.lecturer ? <AllApps/> : show.allApplication  ? <Lectures/> : show.units ? <Units/> : <FindMarks/>
+          show.allApplication ? <AllApps/> : show.lecturer ? <Lectures/> : show.units ? <Units/> : <FindMarks/>
+          // renderComponent()
+          
 
           
         }
 
           
         
-      <Lectures/>
+
       {/* <Units/> */}
       {/* <AllApps /> */}
       </section>

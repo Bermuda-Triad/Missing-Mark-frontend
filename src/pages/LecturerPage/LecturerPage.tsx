@@ -102,7 +102,9 @@ function LecturerPage({}: Props) {
 
         <div className="flex items-center justify-between mt-4">
           <div className="flex items-center justify-start gap-2  ">
-            <Title title="Pending Marks" />
+            <Title title={
+              show.marksFound ? "Marks Found" :show.pendingMarks ? "Pending Marks":"Marks Not Found"
+            } />
             <h3 className="bg-red text-white rounded-full px-2 text-[.7rem]">
               200
             </h3>
