@@ -117,7 +117,8 @@ function Regestration({}: Props) {
        
 
 
-        />  </span>
+        /> 
+         </span>
 
         <span className='border-b border-defaultgray outline-none '>
           <input type="password" className='border-none outline-none text-secondary text-[19.2px] '  placeholder='Password' name='password'  onChange={handleInputChange} />  </span>
@@ -128,7 +129,7 @@ function Regestration({}: Props) {
        <input type="submit" value="Register" className='py-[10px] cursor-pointer bg-secondary text-white' onClick={
         () => {
           handleRegistration
-          navigate("/studentpage")
+          navigate("/student")
         }
        } />
       </form>

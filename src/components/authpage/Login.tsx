@@ -94,7 +94,7 @@ function Login({}: Props) {
 
        </h2>
 
-       <Link to="/register" className='text-red'onClick={e => navigate("register")}> Register </Link>
+       <Link to="/register" className='text-red' onClick={e => navigate("register")}> Register </Link>
 
        </p>
     </div>

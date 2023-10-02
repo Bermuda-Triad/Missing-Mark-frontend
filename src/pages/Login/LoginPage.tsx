@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import loginImage from "../../assets/loginimage.jpg"
 import Regestration from '../../components/authpage/Regestration'
 import { Routes,Route, Router } from 'react-router'
@@ -12,11 +12,15 @@ type Props = {}
 
 function LoginPage({}: Props) {
 
+
+  let path:any = window.location
+  console.log(path == "http://localhost:5173/register"  )
   
   const navigate = useNavigate()
 
   return (
     <div className='flex items- w-full h-screen justify-center gap-[109px]'>
+      
         <div className={`w-full   bg-[url('src/assets/loginimage.jpg')] bg-center bg-cover flex items-center justify-start `}>
        
            <div className='ml-[68px] text-white w-[490px]'>
@@ -32,14 +36,12 @@ function LoginPage({}: Props) {
         <div className='mb-[70px] ' >
             <img src="src/assets/mmustlogo.svg" className='h-[106px] w-[121px]' alt="" />
         </div>
-        {/* <Regestration/> */}
-     <Routes>
-
-
-      <Route  path='/'  Component={ Login }/>
-      <Route  path='/register'  Component={ Regestration }/>
-      
-     </Routes>
+  
+        
+          
+       
+     
+     <Regestration/>
         
        
 

@@ -16,7 +16,7 @@ function App() {
    <div className=' font-Poppins'>
     <Routes>
 
-    <Route path='/login' Component={LoginPage}/>
+    <Route path='/' Component={LoginPage}/>
     <Route path='/student' Component={Student}/>
     <Route path='/lecturerpage' Component={LecturerPage}/>
     <Route path='/codpage' Component={CodPage}/>
