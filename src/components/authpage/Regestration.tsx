@@ -129,12 +129,12 @@ function Regestration({}: Props) {
        <input type="submit" value="Register" className='py-[10px] cursor-pointer bg-secondary text-white' onClick={
         () => {
           handleRegistration
-          navigate("/student")
+          navigate("/")
         }
        } />
       </form>
 
-      <p className='my-[10px] text-[16px]'>Already have an account?  <button  className='text-red' onClick={() => navigate("/")} >Login</button></p>
+      <p className='my-[10px] text-[16px]'>Already have an account?  <Link to="/"  className='text-red'  >Login</Link></p>
     </div>
   )
 }

@@ -12,10 +12,8 @@ type Props = {}
 
 function LoginPage({}: Props) {
 
-
-  let path:any = window.location
-  console.log(path == "http://localhost:5173/register"  )
   
+ 
   const navigate = useNavigate()
 
   return (
@@ -36,12 +34,10 @@ function LoginPage({}: Props) {
         <div className='mb-[70px] ' >
             <img src="src/assets/mmustlogo.svg" className='h-[106px] w-[121px]' alt="" />
         </div>
-  
+
         
-          
-       
-     
-     <Regestration/>
+    <Login/>
+    
         
        
 

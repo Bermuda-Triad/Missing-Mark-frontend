@@ -82,8 +82,8 @@ function Login({}: Props) {
       <form action="" className='flex flex-col gap-[36px]'>
       
 
-        <span className={`border-b border-defaultgray outline-none ${ input ? checker.valid : checker.invalid}` }><input type="password" className={` outline-none placeholder-secondary text-secondary text-[19.2px] w-full `}  placeholder='RF Number/ Reg Number' onChange={refReg}/>  </span>
-        <span className='border-b border-defaultgray outline-none '><input type="password" className='border-none outline-none text-secondary placeholder-secondary  text-[19.2px] '  placeholder='Password'/>  </span>
+        <span className={`border-b border-defaultgray outline-none ${ input ? checker.valid : checker.invalid}` }><input type="password" className={` outline-none placeholder-defaultgray   text-secondary text-[19.2px] w-full `}  placeholder='RF Number/ Reg Number' onChange={refReg}/>  </span>
+        <span className='border-b border-defaultgray outline-none '><input type="password" className='border-none outline-none text-secondary placeholder-defaultgray  text-[19.2px] '  placeholder='Password'/>  </span>
 
         {/* <input type="text" >welcome</input> */}
        <input type="submit" value="Login" onClick={e => navigate("/student")} className='py-[10px] cursor-pointer bg-secondary text-white' />
@@ -94,7 +94,7 @@ function Login({}: Props) {
 
        </h2>
 
-       <Link to="/register" className='text-red' onClick={e => navigate("register")}> Register </Link>
+       <Link to="/register" className='text-red' > Register </Link>
 
        </p>
     </div>
