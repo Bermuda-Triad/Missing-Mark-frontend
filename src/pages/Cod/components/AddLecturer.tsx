@@ -11,7 +11,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: 'background.paper',
-  border: '2px solid #fff',
+
   boxShadow: 24,
   p: 4,
 };
@@ -56,7 +56,7 @@ export default function AddLecturer() {
 
         <label htmlFor="pf-number" className='text-defaultgray capitalize mt-[28px]'>Role</label>
        
-       <select name="" id="" className='py-3 text-defaultgray'>
+       <select name="" id="" className='py-3 pl-3 text-defaultgray'>
         <option className='' value="">Lecturer</option>
        </select>
 

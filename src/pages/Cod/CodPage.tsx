@@ -137,7 +137,7 @@ function CodPage({}: Props) {
       {/* right side */}
 
       <section className="flex-1  flex flex-col h-full  px-4">
-      <div className="flex justify-between items-center border-b border-defaultgray py-6 pr-[4.3rem]">
+      <div className="flex justify-between items-center py-6 pr-[4.3rem]">
 
       <div className="text-etrabold">
         

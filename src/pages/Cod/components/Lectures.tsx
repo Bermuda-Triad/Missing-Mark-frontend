@@ -9,13 +9,13 @@ type Props = {}
 
 function Lectures({}: Props) {
   return (
-    <div className='space-y-7 mt-7'>
+    <div className='space-y-7 mb-7'>
         <Title title='Lecturers'/>
         <AddLecturer/>
 
         <table className="  w-full mt-5  ">
         <thead className="text-secondary ">
-        <tr className=" capitalize font-bold shadow-md ">
+        <tr className=" capitalize font-bold border-b border-tableb ">
           <th className="text-start pl-5 ">Name</th>
           <th className='text-start'>Pf Number</th>
           <th className="text-start ">Units</th>
@@ -27,7 +27,7 @@ function Lectures({}: Props) {
       </thead>
 
       <tbody className=" ">
-        <tr className=" w-full shadow-lg text-secondary  ">
+        <tr className=" w-full border-b border-tableb text-secondary  ">
           <td className="flex  flex-col py-[17px] pl-5">
             Angulu
           </td>

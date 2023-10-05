@@ -14,9 +14,9 @@ function LecturerPage({}: Props) {
   });
 
   return (
-      <div className="px-4 pt-5 flex gap-6  items-start justify-center ">
+      <div className="  flex  bg-brightwhite items-start justify-center ">
         {/* left side */}
-        <section className="h-screen  border-r border-lightGray max-w-[14rem] px-4">
+        <section className="h-screen  bg-white  border-r border-lightGray max-w-[14rem] px-4">
           <div className="flex gap-[6rem]">
             <img
               src="src/assets/mmustlogo.svg"
@@ -33,7 +33,7 @@ function LecturerPage({}: Props) {
           </button>
         </div>
 
-        <div className="flex flex-col gap-[2rem] text-1xl font-Poppins text-center  mx-1 pt-4">
+        <div className="flex bg-white h-screen flex-col gap-[2rem] text-1xl font-Poppins text-center  mx-1 pt-4   ">
           <button
             className={`text-start py-2  w-14rem] pl-5  ${
               show.pendingMarks
@@ -49,7 +49,7 @@ function LecturerPage({}: Props) {
               });
             }}
           >
-            X Pending Marks
+            Pending Marks
           </button>
           <button
             className={`text-start py-2  w-14rem] pl-5  ${
@@ -66,7 +66,7 @@ function LecturerPage({}: Props) {
               console.log(show);
             }}
           >
-            X Marks Found
+             Marks Found
           </button>
           <button
             className={`text-start py-2  w-14rem] pl-5  ${
@@ -82,7 +82,7 @@ function LecturerPage({}: Props) {
               });
             }}
           >
-            X Marks Not Found
+            Marks Not Found
           </button>
         </div>
 
@@ -91,16 +91,16 @@ function LecturerPage({}: Props) {
       {/* left side */}
 
       {/* right side */}
-      <section className="flex-1  flex flex-col h-full  px-4">
-        <div className="flex justify-between items-center border-b border-defaultgray py-6 pr-[4.3rem]">
-          <div className="text-etrabold">
+      <section className="flex-1  flex flex-col h-full   ">
+        <div className="flex justify-between items-center  bg-white  shadow-sm first-letter:  py-6 pr-[4.3rem]">
+          <div className="text-etrabold pl-8">
             <Title title="Missing Mark Portal" />
           </div>
           {/* the drop down */}
           <Profile whosePage="COD" reg="josephat" />
         </div>
 
-        <div className="flex items-center justify-between mt-4">
+        <div className="flex items-center justify-between mt-4 mx-8">
           <div className="flex items-center justify-start gap-2  ">
             <Title title={
               show.marksFound ? "Marks Found" :show.pendingMarks ? "Pending Marks":"Marks Not Found"
@@ -136,9 +136,9 @@ function LecturerPage({}: Props) {
         </div>
 
         {/* table */}
-        <table className=" table-auto mt-5 ">
-          <thead className="text-secondary ">
-            <tr className=" capitalize font-bold  ">
+        <table className=" table-auto mt-5 mx-5  bg-white">
+          <thead className="text-secondary pb-5" >
+            <tr className=" capitalize font-bold border-b border-tableb  ">
               <th className="text-start pl-5 ">Date</th>
               <th className="text-start ">Course Title</th>
               <th className="text-start">Course Code</th>
@@ -151,7 +151,7 @@ function LecturerPage({}: Props) {
           </thead>
 
           <tbody className=" ">
-            <tr className=" w-full shadow-lg text-secondary  ">
+            <tr className=" w-full border-b border-tableb text-secondary  ">
               <td className="flex  flex-col py-[17px] pl-5">
                 <p>10:20AM </p>
                 <p className="text-dateblue">16/2/2020</p>

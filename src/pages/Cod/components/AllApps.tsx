@@ -46,7 +46,7 @@ function AllApps({}: Props) {
     {/* table */}
     <table className=" table-auto mt-5  ">
       <thead className="text-secondary ">
-        <tr className=" capitalize font-bold shadow-md ">
+        <tr className=" capitalize font-bold border-b border-tableb ">
           <th className="text-start pl-5 ">Date</th>
           <th className='text-start'>Reg Number</th>
           <th className="text-start ">Course Title</th>
@@ -58,7 +58,7 @@ function AllApps({}: Props) {
       </thead>
 
       <tbody className=" ">
-        <tr className=" w-full shadow-lg text-secondary  ">
+        <tr className=" w-full   text-secondary border-b border-tableb ">
           <td className="flex  flex-col py-[17px] pl-5">
             <p>10:20AM </p>
             <p className="text-dateblue">16/2/2020</p>

@@ -15,7 +15,7 @@ function Units({}: Props) {
 
      <table className=" w-full mt-5  font-Poppins ">
      <thead className="text-secondary ">
-        <tr className=" capitalize font-bold shadow-md flex flex-row justify-start gap-[280px] items-center">
+        <tr className=" capitalize font-bold border-b border-tableb flex flex-row justify-start gap-[280px] items-center">
           <th className="text-start pl-5 py-3 ">Unit Title</th>
           <th className='text-start py-3'> Unit Code</th>
 
@@ -27,7 +27,7 @@ function Units({}: Props) {
       </thead>
 
       <tbody >
-       <tr className='text-defaultgray  font-normal py-5 shadow-md flex   flex-row  items-center justify-between'>
+       <tr className='text-defaultgray  font-normal py-5 border-b border-tableb flex   flex-row  items-center justify-between'>
         <th className='text-start pl-5 py-5 font-normal'>Communication Skills</th>
         <th className='text-start bg-redx font-normal mr-[350px]'> COS 100 </th>
         <th></th>
