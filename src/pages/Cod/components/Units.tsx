@@ -6,14 +6,14 @@ type Props = {}
 
 function Units({}: Props) {
   return (
-    <div className='mt-5'>
+    <div className='mt-5 mx-10'>
       <div className='my-5'>
 
       <Title title='Units'/>
       </div>
      <AddUnits />
 
-     <table className=" w-full mt-5  font-Poppins ">
+     <table className=" w-full mt-5 bg-white font-Poppins ">
      <thead className="text-secondary ">
         <tr className=" capitalize font-bold border-b border-tableb flex flex-row justify-start gap-[280px] items-center">
           <th className="text-start pl-5 py-3 ">Unit Title</th>

@@ -7,11 +7,11 @@ type Props = {}
 
 function AllApps({}: Props) {
   return (
-    <section className="flex-1  flex flex-col h-full  px-4">
+    <section className="flex-1  flex flex-col h-full     px-4">
     
 
     <div className="flex items-center justify-between mt-4">
-      <div className="flex items-center justify-start gap-2  ">
+      <div className="flex items-center justify-start gap-2  mx-5 ">
         <Title title="Pending Marks" />
         <h3 className="bg-red text-white rounded-full px-2 text-[.7rem]">
           200
@@ -44,7 +44,7 @@ function AllApps({}: Props) {
     </div>
 
     {/* table */}
-    <table className=" table-auto mt-5  ">
+    <table className=" table-auto mt-5  mx-5 bg-white ">
       <thead className="text-secondary ">
         <tr className=" capitalize font-bold border-b border-tableb ">
           <th className="text-start pl-5 ">Date</th>

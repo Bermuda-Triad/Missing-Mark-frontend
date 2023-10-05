@@ -32,9 +32,9 @@ function CodPage({}: Props) {
     }
   }
   return (
-    <div className="px-4 pt-5 flex gap-6  items-start justify-center ">
+    <div className=" flex bg-brightwhite items-start justify-center ">
       {/* left side */}
-      <section className="h-screen  border-r border-lightGray max-w-[14rem] px-4">
+      <section className="h-screen  px-4 border-r bg-white   border-lightGray max-w-[14rem] ">
         <div className="flex gap-[6rem]">
           <img
             src="src/assets/mmustlogo.svg"
@@ -43,11 +43,7 @@ function CodPage({}: Props) {
           />
 
           <button className=" ng-red">
-            <img
-              src="src/assets/menu.svg"
-              alt=""
-              className="w-[20px]h-[30px]"
-            />
+            
           </button>
         </div>
 
@@ -136,26 +132,28 @@ function CodPage({}: Props) {
 
       {/* right side */}
 
-      <section className="flex-1  flex flex-col h-full  px-4">
-      <div className="flex justify-between items-center py-6 pr-[4.3rem]">
+      <section className="flex-1   flex flex-col h-full    ">
+      <div className="flex justify-between items-center py-6  bg-white shadow-sm px-5 ">
 
-      <div className="text-etrabold">
+      <div className="text-etrabold mx-5  ">
         
         <Title title="Missing Mark Portal" />
       </div>
       {/* the drop down */}
       <Profile whosePage="COD" reg="josephat" />
         </div>
+<div className="">
 
         {
           // show.allApplication ||  show.lecturer ? <AllApps/> : show.allApplication  ? <Lectures/> : show.units ? <Units/> : <FindMarks/>
           show.allApplication ? <AllApps/> : show.lecturer ? <Lectures/> : show.units ? <Units/> : <FindMarks/>
           // renderComponent()
           
-
+          
           
         }
 
+        </div>
           
         
 

@@ -53,16 +53,15 @@ export default function Details({ setDetails }: chooses) {
         <Box sx={style}>
           <div></div>
           <div className="w-full  flex flex-col items-start justify-center text-[#6E7685]  text-[1rem]">
-           
-            {
-              setDetails ? <h2 className="mt-7 mb-10 text-[3rem] font-extrabold font-Poppins text-green">
-              Marks Found
-            </h2>
-            :
-            <h2 className="mt-7 mb-10 text-[3rem] font-extrabold font-Poppins text-red">
-            Marks Not Found
-          </h2>
-            }
+            {setDetails ? (
+              <h2 className="mt-7 mb-10 text-[3rem] font-extrabold font-Poppins text-green">
+                Marks Found
+              </h2>
+            ) : (
+              <h2 className="mt-7 mb-10 text-[3rem] font-extrabold font-Poppins text-red">
+                Marks Not Found
+              </h2>
+            )}
 
             <p>
               Unit Title:<strong>Ethical Issues</strong>
@@ -89,8 +88,7 @@ export default function Details({ setDetails }: chooses) {
 
             <h2 className="text-red my-5">Reason</h2>
 
-            {
-           !setDetails ? (
+            {!setDetails ? (
               <p className="p-4 border border-[#DADADA] text-[#2C444E] text-[1rem]">
                 You did not sit for your Exams. Apply for special exams when
                 next offered

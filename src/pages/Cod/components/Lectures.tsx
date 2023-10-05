@@ -9,11 +9,14 @@ type Props = {}
 
 function Lectures({}: Props) {
   return (
-    <div className='space-y-7 mb-7'>
+    <div className='space-y-7 mx-10 mb-7 '>
+      <div className='my-5'>
+
         <Title title='Lecturers'/>
+      </div>
         <AddLecturer/>
 
-        <table className="  w-full mt-5  ">
+        <table className="  w-full mt-5 bg-white  ">
         <thead className="text-secondary ">
         <tr className=" capitalize font-bold border-b border-tableb ">
           <th className="text-start pl-5 ">Name</th>
