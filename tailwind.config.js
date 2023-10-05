@@ -20,7 +20,9 @@ export default {
       green:"#2AA020",
       title:"#484848",
       dateblue:"#1A85D6",
-      lightGray:"#F0F0F0"
+      lightGray:"#F0F0F0",
+      tableb:"#DADADA",
+      brightwhite:"#FAFAFA"
     },
 
     
