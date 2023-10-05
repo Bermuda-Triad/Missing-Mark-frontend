@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+
 import "./StudentDetails.css";
-import ReactTable from "react-table";
-import MissingMark from "../../../components/missingMarkForm/MissingMark";
+
 import AddMark from "../buttons/AddMark";
 import Details from "../../../components/missingMarkForm/Details";
 
